@@ -1,0 +1,13 @@
+0. VARINT x 10
+1. VARLIST list1 10, 20, 30
+2. VARLIST list2 40, 50, 60
+3. COMBINE list1 list2
+4. GET y 2 list1
+5. ADD x y
+6. VARLIST list3 70, 80, 90
+7. SET list3 1 list2
+8. COPY list4 list2
+9. GET list5 1 list4
+10. SET 100 2 list5
+11. HLT
+

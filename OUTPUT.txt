@@ -1,0 +1,274 @@
+The following is a sample output of my program:
+
+
+-----------------------------------------------------
+Printing all instructions:
+
+ VARINT x 10
+ VARLIST list1 10, 20, 30
+ VARLIST list2 40, 50, 60
+ COMBINE list1 list2
+ GET y 2 list1
+ ADD x y
+ VARLIST list3 70, 80, 90
+ SET list3 1 list2
+ COPY list4 list2
+ GET list5 1 list4
+ SET 100 2 list5
+ HLT
+
+Enter command:
+'o' - execute line by line
+'a' - execute all lines
+'q' - quit: a
+
+-----------------------------------------------------
+Executing instruction at program counter (PC): 0
+
+Printing Instruction details:
+
+   Instruction name: VARINT
+   Arguments: x 10 
+   All parts: VARINT x 10 
+
+EXECUTING INSTRUCTION...
+
+Printing data_memory
+
+   x: 10
+-----------------------------------------------------
+
+
+-----------------------------------------------------
+Executing instruction at program counter (PC): 1
+
+Printing Instruction details:
+
+   Instruction name: VARLIST
+   Arguments: list1 10, 20, 30 
+   All parts: VARLIST list1 10, 20, 30 
+
+EXECUTING INSTRUCTION...
+
+Printing data_memory
+
+   list1: (10, 20, 30)
+   x: 10
+-----------------------------------------------------
+
+
+-----------------------------------------------------
+Executing instruction at program counter (PC): 2
+
+Printing Instruction details:
+
+   Instruction name: VARLIST
+   Arguments: list2 40, 50, 60 
+   All parts: VARLIST list2 40, 50, 60 
+
+EXECUTING INSTRUCTION...
+
+Printing data_memory
+
+   list1: (10, 20, 30)
+   list2: (40, 50, 60)
+   x: 10
+-----------------------------------------------------
+
+
+-----------------------------------------------------
+Executing instruction at program counter (PC): 3
+
+Printing Instruction details:
+
+   Instruction name: COMBINE
+   Arguments: list1 list2 
+   All parts: COMBINE list1 list2 
+
+EXECUTING INSTRUCTION...
+
+Printing data_memory
+
+   list1: (10, 20, 30)
+   list2: (10, 20, 30, 40, 50, 60)
+   x: 10
+-----------------------------------------------------
+
+
+-----------------------------------------------------
+Executing instruction at program counter (PC): 4
+
+Printing Instruction details:
+
+   Instruction name: GET
+   Arguments: y 2 list1 
+   All parts: GET y 2 list1 
+
+EXECUTING INSTRUCTION...
+
+Printing data_memory
+
+   list1: (10, 20, 30)
+   list2: (10, 20, 30, 40, 50, 60)
+   x: 10
+   y: 30
+-----------------------------------------------------
+
+
+-----------------------------------------------------
+Executing instruction at program counter (PC): 5
+
+Printing Instruction details:
+
+   Instruction name: ADD
+   Arguments: x y 
+   All parts: ADD x y 
+
+EXECUTING INSTRUCTION...
+
+Printing data_memory
+
+   list1: (10, 20, 30)
+   list2: (10, 20, 30, 40, 50, 60)
+   x: 40
+   y: 30
+-----------------------------------------------------
+
+
+-----------------------------------------------------
+Executing instruction at program counter (PC): 6
+
+Printing Instruction details:
+
+   Instruction name: VARLIST
+   Arguments: list3 70, 80, 90 
+   All parts: VARLIST list3 70, 80, 90 
+
+EXECUTING INSTRUCTION...
+
+Printing data_memory
+
+   list1: (10, 20, 30)
+   list2: (10, 20, 30, 40, 50, 60)
+   list3: (70, 80, 90)
+   x: 40
+   y: 30
+-----------------------------------------------------
+
+
+-----------------------------------------------------
+Executing instruction at program counter (PC): 7
+
+Printing Instruction details:
+
+   Instruction name: SET
+   Arguments: list3 1 list2 
+   All parts: SET list3 1 list2 
+
+EXECUTING INSTRUCTION...
+
+Printing data_memory
+
+   list1: (10, 20, 30)
+   list2: (10, (70, 80, 90), 30, 40, 50, 60)
+   list3: (70, 80, 90)
+   x: 40
+   y: 30
+-----------------------------------------------------
+
+
+-----------------------------------------------------
+Executing instruction at program counter (PC): 8
+
+Printing Instruction details:
+
+   Instruction name: COPY
+   Arguments: list4 list2 
+   All parts: COPY list4 list2 
+
+EXECUTING INSTRUCTION...
+
+Printing data_memory
+
+   list1: (10, 20, 30)
+   list2: (10, (70, 80, 90), 30, 40, 50, 60)
+   list3: (70, 80, 90)
+   list4: (10, (70, 80, 90), 30, 40, 50, 60)
+   x: 40
+   y: 30
+-----------------------------------------------------
+
+
+-----------------------------------------------------
+Executing instruction at program counter (PC): 9
+
+Printing Instruction details:
+
+   Instruction name: GET
+   Arguments: list5 1 list4 
+   All parts: GET list5 1 list4 
+
+EXECUTING INSTRUCTION...
+
+Printing data_memory
+
+   list1: (10, 20, 30)
+   list2: (10, (70, 80, 90), 30, 40, 50, 60)
+   list3: (70, 80, 90)
+   list4: (10, (70, 80, 90), 30, 40, 50, 60)
+   list5: (70, 80, 90)
+   x: 40
+   y: 30
+-----------------------------------------------------
+
+
+-----------------------------------------------------
+Executing instruction at program counter (PC): 10
+
+Printing Instruction details:
+
+   Instruction name: SET
+   Arguments: 100 2 list5 
+   All parts: SET 100 2 list5 
+
+EXECUTING INSTRUCTION...
+
+Printing data_memory
+
+   list1: (10, 20, 30)
+   list2: (10, (70, 80, 90), 30, 40, 50, 60)
+   list3: (70, 80, 90)
+   list4: (10, (70, 80, 100), 30, 40, 50, 60)
+   list5: (70, 80, 100)
+   x: 40
+   y: 30
+-----------------------------------------------------
+
+
+-----------------------------------------------------
+Executing instruction at program counter (PC): 11
+
+Printing Instruction details:
+
+   Instruction name: HLT
+   Arguments: 
+   All parts: HLT 
+
+EXECUTING INSTRUCTION...
+Halting the execution
+
+Printing data_memory
+
+   list1: (10, 20, 30)
+   list2: (10, (70, 80, 90), 30, 40, 50, 60)
+   list3: (70, 80, 90)
+   list4: (10, (70, 80, 100), 30, 40, 50, 60)
+   list5: (70, 80, 100)
+   x: 40
+   y: 30
+-----------------------------------------------------
+
+Enter command:
+'o' - execute line by line
+'a' - execute all lines
+'q' - quit: 
