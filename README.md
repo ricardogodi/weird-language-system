@@ -20,4 +20,5 @@ The Weird Language System is a custom language interpreter in C++ designed for m
    ```bash
    make all
 2. **Run the Executable**"  
-   
+   ```bash
+   ./main
