@@ -1,7 +1,7 @@
 # Weird Language System
 
 ## Project Description
-The Weird Language System is a custom language interpreter in C++ designed for managing linked list operations. This system utilizes the Command design pattern for efficient instruction execution and features advanced object-oriented principles such as encapsulation, abstraction, inheritance, and polymorphism. These design choices ensure data management is flexible and modular, making the system robust and adaptable.
+The Weird Language System is a custom language interpreter in C++ designed for managing linked list operations. This system utilizes the Command Design pattern for efficient instruction execution and features advanced object-oriented principles such as encapsulation, abstraction, inheritance, and polymorphism. These design choices ensure data management is flexible and modular, making the system robust and adaptable.
 
 ## Features
 - **Custom Language Interpreter**: Executes commands for managing linked lists.
